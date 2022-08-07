@@ -7,7 +7,7 @@ services:
 #    command: ["/bin/sh", "-c", "npm install lodash@4.17.11"]
 #    command: ["/bin/sh", "-c", "npx live-server"]
 #    command: ["/bin/sh", "-c", "npx webpack-dev-server"]
-    command: ["/bin/sh", "-c", "npm run start"]
+    command: ["/bin/sh", "-c", "npm install && npm run start"]
     ports:
       - 127.0.0.1:8080:8080
     volumes:

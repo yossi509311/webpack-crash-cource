@@ -3,7 +3,8 @@ services:
   node:
     image: node:10.15.0-alpine
     working_dir: /app
-#   command: ["/bin/sh", "-c", "npm install -D live-server@1.2.1"]
+#    command: ["/bin/sh", "-c", "npm install -D live-server@1.2.1"]
+#    command: ["/bin/sh", "-c", "npm install lodash@4.17.11"]
     command: ["/bin/sh", "-c", "npx live-server"]
     ports:
       - 127.0.0.1:8080:8080

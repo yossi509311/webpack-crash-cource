@@ -8,6 +8,17 @@ module.exports  = {
         filename: 'main.js',
         path: outputPath,
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'css-loader',
+                    'style-loader'
+                ]
+            }
+        ]
+    },
     devServer: {
         contentBase: outputPath,
         host: '0.0.0.0',

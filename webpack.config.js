@@ -16,6 +16,12 @@ module.exports  = {
                     'style-loader',
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.jpe?g|png|gif|svg|ico$/i,
+                use: [
+                    'url-loader'
+                ]
             }
         ]
     },

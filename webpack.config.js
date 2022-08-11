@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const outputPath = path.resolve(__dirname, 'dist')
 
@@ -10,6 +11,11 @@ module.exports  = {
     },
     module: {
         rules: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            },
             {
                 test: /\.css$/,
                 use: [
@@ -32,6 +38,10 @@ module.exports  = {
                     limit: 2048,
                     name: './images/[name].[ext]'
                 }
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
             }
         ]
     },
@@ -39,5 +49,11 @@ module.exports  = {
         contentBase: outputPath,
         host: '0.0.0.0',
         port: 8080,
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: './index.html'
+        })
+    ]
 }

@@ -20,14 +20,17 @@
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
+    "launch": "webpack-dev-server --watch --hot --mode production",
     "start": "webpack-dev-server --watch --hot --mode development"
   },
   "repository": {
